@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import Aux from '../../Hoc/Aux';
+import Slide from '../../Component/Index/Slide/Slide';
+import About from '../../Component/Index/About/About';
+import Collaborators from '../../Component/Index/Collaborators/Collaborators';
 class Index extends Component {
     render() {
         return (
-            <p>Index</p>
+            <Aux>
+                <Slide />
+                <About />
+                <Collaborators />
+            </Aux>
         );
     }
 }
