@@ -5,19 +5,19 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import reducer from './Store/Reducers/adminlogin';
+// import { Provider } from 'react-redux';
+// import { createStore } from 'redux';
+// import reducer from './Store/Reducers/adminlogin';
 
-const store = createStore(reducer);
+// const store = createStore(reducer);
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
+    {/* <Provider store={store}> */}
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </Provider>
+    {/* </Provider> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

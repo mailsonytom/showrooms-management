@@ -2,12 +2,6 @@ import React, { Component } from "react";
 import Button from '../../../Component/UI/Button/Button';
 import Input from '../../../Component/UI/Input/Input';
 import styles from './Login.module.css';
-import * as actions from '../../../Store/Actions/Index';
-import { connect } from "react-redux";
-// import Spinner from "../../Components/UI/Spinner/Spinner";
-// import { Redirect } from "react-router";
-
-
 class Login extends Component {
     state = {
         controls: {
@@ -42,12 +36,6 @@ class Login extends Component {
         },
     }
 
-    // componentDidMount() {
-    //     if (!this.props.buildingBurger && this.props.authRedirectPath !== '/') {
-    //         this.props.onSetAuthRedirectPath();
-    //     }
-    // }
-
     checkValidity(value, rules) {
         let isValid = true;
 
@@ -79,12 +67,6 @@ class Login extends Component {
         this.props.onAuth(this.state.controls.email.value, this.state.controls.password.value);
     }
 
-    // switchAuthModeHandler = () => {
-    //     this.setState(prevState => {
-    //         return { isSignup: !prevState.isSignup };
-    //     });
-    // }
-
     render() {
 
         const formArray = [];
@@ -107,27 +89,8 @@ class Login extends Component {
                 changed={(event) => this.inputChangedHandler(event, formElement.id)} />
         ));
 
-        // if (this.props.loading) {
-        //     form = <Spinner />
-        // }
-
-        // let errorMessage = null;
-
-        // if (this.props.error) {
-        //     errorMessage = (
-        //         <p>{this.props.error.message}</p>
-        //     )
-        // }
-
-        // let authRedirect = null;
-        // if (this.props.isAuthenticated) {
-        //     authRedirect = <Redirect to={this.props.authRedirectPath} />
-        // }
-
         return (
             <div className={styles.Auth}>
-                {/* {authRedirect}
-                {errorMessage} */}
                 <form onSubmit={this.submitHandler}>
                     {form}
                     <Button btnType="Success">LOGIN</Button>
@@ -138,23 +101,6 @@ class Login extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        // loading: state.auth.loading,
-        // error: state.auth.error,
-        isAuthenticated: state.auth.token !== null,
-        // buildingBurger: state.Burger.building,
-        // authRedirectPath: state.auth.authRedirectPath
-    };
-};
-
-const mapDispatchToProps = dispatch => {
-    return {
-        onAuth: (email, password) => dispatch(actions.auth(email, password)),
-        // onSetAuthRedirectPath: () => dispatch(actions.setAuthRedirectPath('/'))
-    };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default Login;
 
 
