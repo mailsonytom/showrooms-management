@@ -9,6 +9,7 @@ const NavigationItems = (props) => (
             ? <NavigationItem link="/adminlogin">Authetication</NavigationItem>
             : <NavigationItem link="/logout">Logout</NavigationItem>}
         <NavigationItem link="/companies">Companies</NavigationItem>
+        <NavigationItem link="/companyAuth">Company Login</NavigationItem>
     </ul>
 );
 

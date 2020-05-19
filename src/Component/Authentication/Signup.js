@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Button from '../UI/Button/Button';
 import Input from '../UI/Input/Input';
-import styles from './Login.module.css';
+import styles from './Signup.module.css';
 
 
 class Signup extends Component {
@@ -134,7 +134,7 @@ class Signup extends Component {
             <div className={styles.Signup}>
                 <form onSubmit={this.submitHandler}>
                     {form}
-                    <Button btnType="Success">Signup</Button>
+                    <Button btnType="Success">SIGNUP</Button>
                 </form>
             </div>
 
