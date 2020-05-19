@@ -1,14 +1,16 @@
+import React, { Component } from "react";
+
+import Companies from '../../../Component/Companies/Companies';
 
 
-const Companies = (props) => {
-    return (
-        <div>
-            <ul>
-                <li>Company1</li>
-                <li>Company2</li>
-            </ul>
-        </div>
-    )
+class Companies extends Component {
+    render() {
+        return (
+            <div>
+                <Companies />
+            </div>
+        )
+    }
 }
 
 export default Companies;
