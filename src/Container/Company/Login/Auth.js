@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-import Login from "../../Component/Authentication/Login";
-import Signup from "../../Component/Authentication/Signup";
+import Login from "../../../Component/Authentication/Login";
+import Signup from "../../../Component/Authentication/Signup";
 
-import Button from '../../Component/UI/Button/Button';
+import Button from '../../../Component/UI/Button/Button';
 
 class CompanyAuth extends Component {
     state = {

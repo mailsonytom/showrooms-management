@@ -6,7 +6,7 @@ import { Route } from 'react-router';
 import Index from './Container/Index/Index';
 import adminLogin from './Container/Admin/Login/Login';
 import Companies from './Component/Companies/Companies';
-import CompanyAuth from './Container/Company/Auth';
+import CompanyAuth from './Container/Company/Login/Auth';
 
 function App() {
   return (
