@@ -1,16 +1,41 @@
-import React from 'react';
+import React, { Component } from "react";
+import Aux from '../../Hoc/Aux';
 
-import Company from "./Company/Company"
+import styles from './Companies.module.css';
 
 
-const Companies = (props) => {
-    return (
-        <div>
-            <ul>
-                <Company>Company 1</Company>
-            </ul>
-        </div>
-    );
+class Companies extends Component {
+    render() {
+        return (
+            <Aux>
+                <h2>Companies</h2>
+                <div className="row">
+                    <div className={styles.visitor}>
+                        <span className={styles.span}>
+                            <p>Company Name</p>
+                            <p>Company Address </p>
+                            <button className={styles.Button}>Reject</button>
+                        </span>
+
+                    </div>
+                    <div className={styles.visitor}>
+                        <span className={styles.span}>
+                            <p>Company Name </p>
+                            <p>Company Address </p>
+                            <button className={styles.Button}>Reject</button>
+                        </span>
+                    </div>
+                    <div className={styles.visitor}>
+                        <span className={styles.span}>
+                            <p>Company Name </p>
+                            <p>Company Address </p>
+                            <button className={styles.Button}>Reject</button>
+                        </span>
+                    </div>
+                </div>
+            </Aux>
+        )
+    }
 }
 
 export default Companies;
