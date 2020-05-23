@@ -7,7 +7,7 @@ import styles from './Signup.module.css';
 class Signup extends Component {
     state = {
         controls: {
-            userName: {
+            Name: {
                 elementType: 'input',
                 elementConfig: {
                     type: 'text',
